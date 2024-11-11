@@ -8,7 +8,13 @@ public class Jenkins1111Test {
     private JenkinsService service = new JenkinsService();
 
     @Test
-    public void testService() {
+    public void testService1() {
         assertEquals(55, service.hap(10));
+    }
+
+
+    @Test
+    public void testService2() {
+        assertEquals(120, service.factorial(5));
     }
 }
