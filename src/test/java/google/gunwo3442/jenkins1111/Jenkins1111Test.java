@@ -15,6 +15,8 @@ public class Jenkins1111Test {
 
     @Test
     public void testService2() {
-        assertEquals(720, service.factorial(6));
+        assertEquals(120, service.factorial(5));
+
+
     }
 }
