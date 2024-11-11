@@ -42,5 +42,12 @@ pipeline{
                ])
             }
         }
+
+        stage("Docker build"){
+            steps{
+               sh "./gradlew clean build"
+               sh "docker build -t jenkins1111 ."
+            }
+        }
     }
 }
