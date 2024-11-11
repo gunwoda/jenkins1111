@@ -6,7 +6,7 @@ pipeline{
             sh "echo checkout"
             }
         }
-        stages("Compile"){
+        stage("Compile"){
             steps{
             sh "./gradlew compileJava"
             }
