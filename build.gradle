@@ -3,6 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '3.3.5'
 	id 'io.spring.dependency-management' version '1.1.6'
 	id 'jacoco'
+	id 'checkstyle'
 }
 jacocoTestCoverageVerification{
 	violationRules{
@@ -15,6 +16,12 @@ jacocoTestCoverageVerification{
 }
 
 
+checkstyle {
+	maxWarnings = 0
+	configFile = file("${rootDir}/config/checkstyle.xml")
+	configProperties = ["suppressionFile":"${rootDir}/config/checkstyle-suppressions.xml"]
+	toolVersion = "8.42"
+}
 group = 'google.gunwo3442'
 version = '0.0.1-SNAPSHOT'
 
