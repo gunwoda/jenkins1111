@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("checkout"){
             steps{
-            sh "echo checkout"
+                sh "echo checkout"
             }
         }
         stage("Permission"){
@@ -13,7 +13,12 @@ pipeline{
         }
         stage("Compile"){
             steps{
-            sh "./gradlew compileJava"
+                sh "./gradlew compileJava"
+            }
+        }
+        stage("Test"){
+            steps{
+                sh "./gradlew test"
             }
         }
     }
