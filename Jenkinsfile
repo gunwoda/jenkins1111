@@ -3,7 +3,12 @@ pipeline{
     stages{
         stage("checkout"){
             steps{
-            sh "echo hello world"
+            sh "echo checkout"
+            }
+        }
+        stages("Compile"){
+            steps{
+            sh "./gradlew compileJava"
             }
         }
     }
